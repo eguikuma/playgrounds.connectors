@@ -1,0 +1,49 @@
+{
+  "name": "playgrounds.connectors",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "lint": "biome lint ./sources",
+    "lint:fix": "biome lint --fix ./sources",
+    "lint:imports": "eslint .",
+    "lint:imports:fix": "eslint --fix .",
+    "format": "biome format ./sources",
+    "format:fix": "biome format --write ./sources",
+    "tsc": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run --reporter=verbose",
+    "test:coverage": "vitest run --coverage",
+    "ci": "run-s lint:imports:fix lint:fix format:fix tsc test:run",
+    "package:deps": "ncu",
+    "package:update": "ncu -i",
+    "package:update:force": "ncu -u"
+  },
+  "dependencies": {
+    "@tanstack/query-core": "^5.90.11",
+    "@tanstack/react-query": "^5.90.11",
+    "http-status-codes": "^2.3.0",
+    "react": "^19.2.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.8",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@typescript-eslint/parser": "^8.48.0",
+    "@vitest/ui": "^4.0.14",
+    "eslint": "^9.39.1",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import-x": "^4.16.1",
+    "happy-dom": "^20.0.11",
+    "npm-check-updates": "^19.1.2",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --fix .",
+    "lint:imports": "eslint .",
+    "lint:imports:fix": "eslint --fix .",
+    "format": "biome format .",
+    "format:fix": "biome format --write .",
+    "tsc": "tsc --noEmit",
+    "ci": "run-s lint:imports:fix lint:fix format:fix tsc",
+    "package:deps": "ncu",
+    "package:update": "ncu -i",
+    "package:update:force": "ncu -u"
+  },
+  "dependencies": {
+    "next": "^16.0.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-intersection-observer": "^10.0.0",
+    "react-syntax-highlighter": "^16.1.0",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  }
+}
