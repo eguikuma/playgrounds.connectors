@@ -1,0 +1,42 @@
+{
+  "name": "@outcomify/rssify-tanstack",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    "./react": {
+      "types": "./distributions/react/index.d.ts",
+      "import": "./distributions/react/index.js"
+    }
+  },
+  "files": [
+    "distributions"
+  ],
+  "scripts": {
+    "build": "rm -rf distributions && tsup",
+    "ci": "eslint --fix . && biome lint --fix . && biome format --write . && tsc --noEmit"
+  },
+  "dependencies": {
+    "@outcomify/requestify": "workspace:*",
+    "@outcomify/restify-tanstack": "workspace:*",
+    "@outcomify/rssify": "workspace:*"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.0.0",
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@tanstack/react-query": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5.90.12",
+    "@types/react": "^19.2.7",
+    "http-status-codes": "^2.3.0",
+    "react": "^19.2.3",
+    "tsup": "^8.5.1"
+  }
+}

@@ -1,0 +1,7 @@
+packages:
+  - 'packages/requestify'
+  - 'packages/restify/standalone'
+  - 'packages/restify/tanstack'
+  - 'packages/rssify/standalone'
+  - 'packages/rssify/tanstack'
+  - 'apps/*'

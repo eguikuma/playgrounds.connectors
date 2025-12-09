@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-nunito), system-ui, sans-serif;
+  --color-normal-start: #9ca3af;
+  --color-normal-end: #6b7280;
+  --color-fire-start: #f97316;
+  --color-fire-end: #ef4444;
+  --color-water-start: #3b82f6;
+  --color-water-end: #06b6d4;
+  --color-electric-start: #fbbf24;
+  --color-electric-end: #f59e0b;
+  --color-grass-start: #10b981;
+  --color-grass-end: #059669;
+  --color-ice-start: #22d3ee;
+  --color-ice-end: #3b82f6;
+  --color-fighting-start: #dc2626;
+  --color-fighting-end: #ea580c;
+  --color-poison-start: #9333ea;
+  --color-poison-end: #7c3aed;
+  --color-ground-start: #d97706;
+  --color-ground-end: #a16207;
+  --color-flying-start: #818cf8;
+  --color-flying-end: #0ea5e9;
+  --color-psychic-start: #ec4899;
+  --color-psychic-end: #a855f7;
+  --color-bug-start: #84cc16;
+  --color-bug-end: #16a34a;
+  --color-rock-start: #b45309;
+  --color-rock-end: #78716c;
+  --color-ghost-start: #6d28d9;
+  --color-ghost-end: #4338ca;
+  --color-dragon-start: #4f46e5;
+  --color-dragon-end: #9333ea;
+  --color-dark-start: #374151;
+  --color-dark-end: #111827;
+  --color-steel-start: #64748b;
+  --color-steel-end: #4b5563;
+  --color-fairy-start: #f472b6;
+  --color-fairy-end: #fb7185;
+}
+
+@source inline("from-normal-start to-normal-end");
+@source inline("from-fire-start to-fire-end");
+@source inline("from-water-start to-water-end");
+@source inline("from-electric-start to-electric-end");
+@source inline("from-grass-start to-grass-end");
+@source inline("from-ice-start to-ice-end");
+@source inline("from-fighting-start to-fighting-end");
+@source inline("from-poison-start to-poison-end");
+@source inline("from-ground-start to-ground-end");
+@source inline("from-flying-start to-flying-end");
+@source inline("from-psychic-start to-psychic-end");
+@source inline("from-bug-start to-bug-end");
+@source inline("from-rock-start to-rock-end");
+@source inline("from-ghost-start to-ghost-end");
+@source inline("from-dragon-start to-dragon-end");
+@source inline("from-dark-start to-dark-end");
+@source inline("from-steel-start to-steel-end");
+@source inline("from-fairy-start to-fairy-end");
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes subtle-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .animate-subtle-pulse {
+    animation: subtle-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 4s ease-in-out infinite;
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.3s ease-out;
+  }
+
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #1f2937 #e5e7eb;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: #e5e7eb;
+    border: 1px solid #111827;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border: 1px solid #111827;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #374151;
+  }
+
+  .scrollbar pre {
+    scrollbar-width: thin;
+    scrollbar-color: #1f2937 #e5e7eb;
+  }
+
+  .scrollbar pre::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar pre::-webkit-scrollbar-track {
+    background: #e5e7eb;
+    border: 1px solid #111827;
+  }
+
+  .scrollbar pre::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border: 1px solid #111827;
+  }
+
+  .scrollbar pre::-webkit-scrollbar-thumb:hover {
+    background: #374151;
+  }
+}

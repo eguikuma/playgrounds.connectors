@@ -1,0 +1,24 @@
+# dependencies
+node_modules
+
+# production
+distributions
+
+# misc
+.DS_Store
+*.pem
+
+# local env files
+.env*
+!.env.example
+
+# typescript
+*.tsbuildinfo
+
+# turborepo
+.turbo
+
+# documents
+*.md
+!README.md
+!SETUP.md

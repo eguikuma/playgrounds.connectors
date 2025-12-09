@@ -1,0 +1,27 @@
+{
+  "name": "@outcomify/rssify",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./distributions/index.d.ts",
+      "import": "./distributions/index.js"
+    }
+  },
+  "files": [
+    "distributions"
+  ],
+  "scripts": {
+    "build": "rm -rf distributions && tsup",
+    "ci": "eslint --fix . && biome lint --fix . && biome format --write . && tsc --noEmit"
+  },
+  "dependencies": {
+    "@outcomify/requestify": "workspace:*",
+    "@outcomify/restify": "workspace:*",
+    "http-status-codes": "^2.3.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1"
+  }
+}
